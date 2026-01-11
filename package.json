@@ -1,0 +1,77 @@
+{
+	"name": "n8n-nodes-paddle",
+	"version": "1.0.0",
+	"description": "A comprehensive n8n community node for Paddle payment platform providing 12 resources and 70+ operations for subscription management, transaction processing, and customer lifecycle automation.",
+	"license": "BUSL-1.1",
+	"author": {
+		"name": "Velocity BPA",
+		"email": "licensing@velobpa.com",
+		"url": "https://velobpa.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Velocity-BPA/n8n-nodes-paddle.git"
+	},
+	"homepage": "https://github.com/Velocity-BPA/n8n-nodes-paddle",
+	"bugs": {
+		"url": "https://github.com/Velocity-BPA/n8n-nodes-paddle/issues"
+	},
+	"keywords": [
+		"n8n",
+		"n8n-community-node-package",
+		"paddle",
+		"payments",
+		"subscriptions",
+		"billing",
+		"saas",
+		"merchant-of-record",
+		"tax-compliance",
+		"invoicing",
+		"checkout"
+	],
+	"main": "dist/nodes/Paddle/Paddle.node.js",
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"credentials": [
+			"dist/credentials/PaddleApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Paddle/Paddle.node.js",
+			"dist/nodes/Paddle/PaddleTrigger.node.js"
+		]
+	},
+	"scripts": {
+		"build": "tsc && gulp build:icons",
+		"dev": "tsc --watch",
+		"format": "prettier nodes credentials --write",
+		"lint": "eslint . --ext .ts",
+		"lint:fix": "eslint . --ext .ts --fix",
+		"prepublishOnly": "npm run build",
+		"test": "jest",
+		"test:coverage": "jest --coverage"
+	},
+	"devDependencies": {
+		"@types/jest": "^29.5.12",
+		"@types/node": "^20.11.24",
+		"@typescript-eslint/eslint-plugin": "^7.1.0",
+		"@typescript-eslint/parser": "^7.1.0",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-n8n-nodes-base": "^1.16.1",
+		"gulp": "^4.0.2",
+		"jest": "^29.7.0",
+		"n8n-workflow": "^1.30.0",
+		"prettier": "^3.2.5",
+		"ts-jest": "^29.1.2",
+		"typescript": "^5.3.3"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "^1.0.0"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	}
+}

@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.jest/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Package manager lock files (optional - you may want to keep these)
+# package-lock.json
+# yarn.lock
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
